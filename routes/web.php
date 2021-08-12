@@ -44,4 +44,5 @@ Route::get('/Station',[StationController::class,'platform'])->name('Stationplatf
 Route::get('/TicketBooking',[TicketBookingController::class,'Conformation'])->name('TicketBookingConformation');
 Route::get('/Route',[RouteController::class,'location'])->name('Routelocation');
 Route::get('/Train',[TrainController::class,'Status'])->name('Trainstatus');
-Route::get('/Login',[LoginController::class,'login'])->name('Loginlogin');
+Route::get('/Ragistration',[LoginController::class,'Ragistration'])->name('Ragistration');
+Route::post('/Ragistrationpost',[LoginController::class,'Ragistrationpost'])->name('Ragistrationpost');

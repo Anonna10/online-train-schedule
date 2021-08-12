@@ -17,13 +17,15 @@
      <header class="heading"> Registration-Form</header><hr></hr>
 	<!---Form starting----> 
 	<div class="row ">
+    <form action=" {{route('Ragistrationpost')}}" method="post">
+     @csrf
 	 <!--- For Name---->
          <div class="col-sm-12">
              <div class="row">
 			     <div class="col-xs-4">
           	         <label class="firstname">First Name :</label> </div>
 		         <div class="col-xs-8">
-		             <input type="text" name="fname" id="fname" placeholder="Enter your First Name" class="form-control ">
+		             <input type="text" name="First_name" id="fname" placeholder="Enter your First Name" class="form-control ">
              </div>
 		      </div>
 		 </div>
@@ -34,7 +36,7 @@
 			     <div class="col-xs-4">
                      <label class="lastname">Last Name :</label></div>
 				<div class ="col-xs-8">	 
-		             <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" class="form-control last">
+		             <input type="text" name="Last_Name" id="lname" placeholder="Enter your Last Name" class="form-control last">
                 </div>
 		     </div>
 		 </div>
@@ -44,17 +46,30 @@
 			     <div class="col-xs-4">
 		             <label class="mail" >Email :</label></div>
 			     <div class="col-xs-8"	>	 
-			          <input type="email" name="email"  id="email"placeholder="Enter your email" class="form-control" >
+			          <input type="email" name="Email"  id="email"placeholder="Enter your email" class="form-control" >
 		         </div>
 		     </div>
 		 </div>
+		 <div class="col-sm-12">
+		     <div class="row">
+			     <div class="col-xs-4">
+		             <label class="lastname" >Phone Number :</label></div>
+			     <div class="col-xs-8"	>	 
+			          <input type="number" name="Phone number"  id="Phnoe number"placeholder="Enter your Phone number" class="form-control" >
+		         </div>
+		     </div>
+		 </div>
+
+
+
+
 	 <!-----For Password and confirm password---->
           <div class="col-sm-12">
 		         <div class="row">
 				     <div class="col-xs-4">
 		 	              <label class="pass">Password :</label></div>
 				  <div class="col-xs-8">
-			             <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control">
+			             <input type="password" name="Password" id="password" placeholder="Enter your Password" class="form-control">
 				 </div>
           </div>
 		  </div>
@@ -67,21 +82,21 @@
 				 </div>
 			 
 			     <div class="col-xs-4 male">	 
-				     <input type="radio" name="gender"  id="gender" value="boy">Male</input>
+				     <input type="radio" name="Gender"  id="gender" value="boy">Male</input>
 				 </div>
 				 
 				 <div class="col-xs-4 female">
-				     <input type="radio"  name="gender" id="gender" value="girl" >Female</input>
+				     <input type="radio"  name="Gender" id="gender" value="girl" >Female</input>
 			     </div>
 			
 		  	 </div>
 		     <div class="col-sm-12">
-		         <div class="btn btn-warning">Submit</div>
+		         <div class=""><input type="submit" class="btn btn-warning" value="Registered" ></div>
 		   </div>
 		 </div>
 	 </div>	 
 		 		 
-		 
+	 </form>	 
 </div>
 
 </body>		
